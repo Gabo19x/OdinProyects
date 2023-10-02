@@ -1,0 +1,103 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background: url("../assets/MB2.png");
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+}
+
+main {
+  background-color: rgba(73, 73, 73, 0.452);
+  width: 50vw;
+  height: 50%;
+}
+
+.Form {
+  padding: 10px 0 0 20px;
+}
+.Form h1 {
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.Form h3 {
+  color: white;
+  background-color: rgba(184, 0, 0, 0.726);
+  margin-right: 20px;
+  padding: 5px;
+}
+.Form h3::before {
+  content: "❌";
+}
+.Form h3::after {
+  content: "❌";
+}
+.Form legend {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.Form input {
+  outline: none;
+}
+.Form option {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.Form hr {
+  margin: 20px 10px 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.637);
+  border-radius: 5px;
+}
+
+.Item {
+  width: 70%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  display: block;
+}
+.Item:focus {
+  border: 3px solid;
+}
+.Item:valid {
+  border-color: green;
+}
+.Item:invalid {
+  border-color: red;
+}
+
+.Button {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.Button_create {
+  background-color: rgb(0, 68, 0);
+}
+.Button_create:hover {
+  background-color: transparent;
+  border: 3px solid rgb(1, 150, 1);
+}
+
+.Button_reset {
+  background-color: rgb(68, 16, 0);
+}
+.Button_reset:hover {
+  background-color: transparent;
+  border: 3px solid rgb(148, 35, 1);
+}/*# sourceMappingURL=style.css.map */
