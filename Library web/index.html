@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/Book.png"> <!-- Icon -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <header class="Header" id="Header">
+            <Figure class="Company">
+                <img src="assets/Book.png" alt="Company image">
+                <h1>Library</h1>
+            </Figure>
+            <Form class="Add">
+                <div class="Add_input">
+                    <legend>Book title:</legend>
+                    <input placeholder="Book name" type="text" id="BookName" required>
+                </div>
+                <div class="Add_input">
+                    <legend>Author:</legend>
+                    <input placeholder="Author name" type="text" id="BookAuthor" required>
+                </div>
+                <div class="Add_input ">
+                    <legend>Pages number:</legend>
+                    <input class="Add_input--number" placeholder="Pages" type="number" id="BookPages" min="10" required>
+                </div>
+
+                <button class="Button" type="submit">Add book</button>
+                
+            </Form>
+            
+        </header>
+
+        <ul class="Body" id="Body">
+            <template id='TemplateBook'>
+                <li class="Book">
+                    <h3 class="Book_title"></h3>
+                    <p class="Book_author"></p>
+                    <p class="Book_pages"></p>
+                    <button class="Button Button_read">Check</button>
+                    <button class="Button Button_delete">Delete book</button>
+                </li>
+            </template>
+            
+
+        </ul>
+    </main>
+</body>
+<script src="js/index.js"></script>
+</html>
