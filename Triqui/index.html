@@ -11,11 +11,43 @@
 </head>
 <body>
     <main>
+        <div class="Container">
+            <section class="Game">
+            
+                <figure class="Game_block" id="1"></figure>
+                <figure class="Game_block" id="2"></figure>
+                <figure class="Game_block" id="3"></figure>
+    
+                <figure class="Game_block" id="4"></figure>
+                <figure class="Game_block" id="5"></figure>
+                <figure class="Game_block" id="6"></figure>
+    
+                <figure class="Game_block" id="7"></figure>
+                <figure class="Game_block" id="8"></figure>
+                <figure class="Game_block" id="9"></figure>
+                
+            </section>
+            
+        </div>
+        
 
+        <section class="Text">
+            <h1 class="Text_one">Player 🔴: <span id="One">0</span></h1>
+            <h2>VS</h2>
+            <h1 class="Text_two">Player 🔵: <span id="Two">0</span></h1>
+        </section>
+
+        <section class="Buttons">
+            <button class="Button_blue" onclick="Reset(false)">🔄 Replay</button>
+            <button class="Button_red" onclick="Reset(true)">💥 Total reset</button>
+        </section>
     </main>
     
     <footer>
         <a href="https://github.com/Gabo19x">Powered by: GABO19</a>
     </footer>
 </body>
+
+<script src="./js/game.js"></script>
+
 </html>
