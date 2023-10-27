@@ -1,0 +1,131 @@
+//Variables
+$primary: #FFA000;
+$secondary: #FFECB3;
+$tertiary: #f0f0f0;
+$coloText: #212121;
+
+$red: rgb(221, 1, 1);
+$yellow: rgb(223, 219, 0);
+$green: rgb(16, 192, 0);
+
+$border: 10px;
+
+// Global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+h1 { font-size: 40px; color: $coloText; }
+h2 { font-size: 35px; color: $coloText; }
+h3 { font-size: 25px; color: $coloText; }
+p { font-size: 18px; color: $coloText; }
+
+input, select, textarea {
+    font-size: 18px;
+    padding: 5px;
+    color: $coloText;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 20px;
+    color: $coloText;
+    cursor: pointer;
+}
+
+input[type="submit"] { cursor: pointer; }
+
+.Button_trasparent {
+    background-color: transparent;
+    border: none;
+}
+
+.d-none { display: none; }
+
+// Body
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: min(100vw);
+
+    background-color: $tertiary;
+
+    main {
+        display: block;
+
+        padding: 20px 0 20px 10px;
+
+        .Task_list {
+            display: inherit;
+            padding: 0 0 0 10px;
+            
+            .Task {
+                display: block;
+                
+                border: 2px solid black;
+                border-radius: $border;
+
+                padding: 5px;
+                margin: 10px 0;
+
+                h3 { margin-bottom: 10px; }
+                button { margin-top: 10px; }
+            }
+
+            .Low { box-shadow: -5px 0 $green, 10px 0 $green; }
+            .Medium { box-shadow: -5px 0 $yellow, 10px 0 $yellow; }
+            .High { box-shadow: -5px 0 $red, 10px 0 $red; }
+        }
+    }
+
+    nav {
+        display: block;
+        justify-self: end;
+        background-color: $primary;
+
+        padding: 20px 5px;
+        height: 100%;
+
+        .List_list {
+            display: grid;
+        }
+    }
+
+    .Form_create_task {
+        position: fixed;
+        top: 10%;
+        right: 50%;
+
+        width: 300px;
+        height: auto;
+
+        background-color: $secondary;
+        border-radius: $border;
+        padding: 10px;
+    }
+}
+
+// Footer
+footer {
+    background-color: $primary;
+    
+    width: 100%;
+    height: 5vw;
+    padding: 20px;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    position: fixed;
+    bottom: 0;
+
+    a {
+        color: $coloText;
+        text-decoration: none;
+        font-size: 25px;
+    }
+}

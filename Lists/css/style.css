@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Itim", cursive;
+}
+
+h1 {
+  font-size: 40px;
+  color: #212121;
+}
+
+h2 {
+  font-size: 35px;
+  color: #212121;
+}
+
+h3 {
+  font-size: 25px;
+  color: #212121;
+}
+
+p {
+  font-size: 18px;
+  color: #212121;
+}
+
+input, select, textarea {
+  font-size: 18px;
+  padding: 5px;
+  color: #212121;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #212121;
+  cursor: pointer;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+.Button_trasparent {
+  background-color: transparent;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100vw;
+  background-color: #f0f0f0;
+}
+body main {
+  display: block;
+  padding: 20px 0 20px 10px;
+}
+body main .Task_list {
+  display: inherit;
+  padding: 0 0 0 10px;
+}
+body main .Task_list .Task {
+  display: block;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0;
+}
+body main .Task_list .Task h3 {
+  margin-bottom: 10px;
+}
+body main .Task_list .Task button {
+  margin-top: 10px;
+}
+body main .Task_list .Low {
+  box-shadow: -5px 0 rgb(16, 192, 0), 10px 0 rgb(16, 192, 0);
+}
+body main .Task_list .Medium {
+  box-shadow: -5px 0 rgb(223, 219, 0), 10px 0 rgb(223, 219, 0);
+}
+body main .Task_list .High {
+  box-shadow: -5px 0 rgb(221, 1, 1), 10px 0 rgb(221, 1, 1);
+}
+body nav {
+  display: block;
+  justify-self: end;
+  background-color: #FFA000;
+  padding: 20px 5px;
+  height: 100%;
+}
+body nav .List_list {
+  display: grid;
+}
+body .Form_create_task {
+  position: fixed;
+  top: 10%;
+  right: 50%;
+  width: 300px;
+  height: auto;
+  background-color: #FFECB3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #FFA000;
+  width: 100%;
+  height: 5vw;
+  padding: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+}
+footer a {
+  color: #212121;
+  text-decoration: none;
+  font-size: 25px;
+}/*# sourceMappingURL=style.css.map */

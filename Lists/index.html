@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My workshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="assets/Book.png"> <!-- Icon -->
+</head>
+<body>
+    <main class="Main">
+        <h1 id="Main_title" class="d-none">[List name]</h1>
+        <button id="AddTask" class="d-none">Add task</button>
+        <button id="Main_delete" class="Delete d-none">Delete all tasks</button>
+
+        <section class="Task_list">
+            
+        </section>
+
+        <template id="TempTask">
+            <div class="Task">
+                <h3>[Title]</h3>
+                <p>[Description]</p>
+                <p>[Date]</p>
+                <button class="Delete Button_trasparent">❌</button>
+            </div>
+            
+        </template>
+    </main>
+
+    <nav>
+        <h2>My lists</h2>
+        <section class="List_list">
+            
+
+            <template id="TempList">
+                <div class="List">
+                    <button class="Button_list">[Text]</button>
+                    <button class="Delete Button_trasparent">❌</button>
+                </div>
+            </template>
+
+            <form id="Form_superList">
+                <input id="Form_superList--name" type="text" placeholder="List name" required>
+                <input class="Button_trasparent" type="submit" value="🔼">
+            </form>
+        </section>
+    </nav>
+
+    <form id="Form_task" class="Form_create_task  d-none">
+        <h2>Create new task</h2>
+        
+        <input id="Form_task--name" type="text" placeholder="Task name" required>
+        <textarea id="Form_task--des" type="text" placeholder="Description" rows="5" required></textarea>
+        <p>Deadline</p>
+        <input id="Form_task--date" type="date">
+        <select id="Form_task--priority" required>
+            <option disabled selected>Choose priority</option>
+            <option>🟢Low</option>
+            <option>🟡Medium</option>
+            <option>🔴High</option>
+        </select>
+
+        <input type="submit" value="Add task">
+        <button>Cancel</button>
+    </form>
+
+    <footer>
+        <a href="https://github.com/Gabo19x">Powered by: GABO19</a>
+    </footer>
+</body>
+
+<script src="./js/app.js"></script>
+</html>
