@@ -15,7 +15,7 @@
 <body>
     <main class="Main">
         <h1 id="Main_title" class="d-none">[List name]</h1>
-        <button id="AddTask" class="d-none">Add task</button>
+        <button id="AddTask" class="Button_add d-none">Add task</button>
         <button id="Main_delete" class="Delete d-none">Delete all tasks</button>
 
         <section class="Task_list">
@@ -53,21 +53,24 @@
     </nav>
 
     <form id="Form_task" class="Form_create_task  d-none">
-        <h2>Create new task</h2>
+        <div>
+            <h2>Create new task</h2>
         
-        <input id="Form_task--name" type="text" placeholder="Task name" required>
-        <textarea id="Form_task--des" type="text" placeholder="Description" rows="5" required></textarea>
-        <p>Deadline</p>
-        <input id="Form_task--date" type="date">
-        <select id="Form_task--priority" required>
-            <option disabled selected>Choose priority</option>
-            <option>🟢Low</option>
-            <option>🟡Medium</option>
-            <option>🔴High</option>
-        </select>
+            <input id="Form_task--name" type="text" placeholder="Task name" required>
+            <textarea id="Form_task--des" type="text" placeholder="Description" rows="5" required></textarea>
+            <p>Deadline</p>
+            <input id="Form_task--date" type="date">
+            <select id="Form_task--priority" required>
+                <option disabled selected>Choose priority</option>
+                <option>🟢Low</option>
+                <option>🟡Medium</option>
+                <option>🔴High</option>
+            </select>
 
-        <input type="submit" value="Add task">
-        <button>Cancel</button>
+            <input class="Button_add" type="submit" value="Add task">
+            <input class="Button_cancel" type="reset" value="Cancel">
+        </div>
+        
     </form>
 
     <footer>

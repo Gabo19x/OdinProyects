@@ -1,8 +1,10 @@
 //Variables
-$primary: #FFA000;
-$secondary: #FFECB3;
+$primary: #388E3C;
+$secondary: #C8E6C9;
 $tertiary: #f0f0f0;
-$coloText: #212121;
+$textColor: #212121;
+
+$buttonColor: #8BC34A;
 
 $red: rgb(221, 1, 1);
 $yellow: rgb(223, 219, 0);
@@ -18,32 +20,70 @@ $border: 10px;
     font-family: 'Itim', cursive;
 }
 
-h1 { font-size: 40px; color: $coloText; }
-h2 { font-size: 35px; color: $coloText; }
-h3 { font-size: 25px; color: $coloText; }
-p { font-size: 18px; color: $coloText; }
+h1 { font-size: 40px; color: $textColor; }
+h2 { font-size: 35px; color: $textColor; }
+h3 { font-size: 25px; color: $textColor; }
+p { font-size: 18px; color: $textColor; }
 
 input, select, textarea {
     font-size: 18px;
     padding: 5px;
-    color: $coloText;
+    margin-bottom: 5px;
+    color: $textColor;
 }
 
-button {
-    padding: 5px 10px;
+.d-none { display: none; }
+
+// Buttons
+button, select, input[type="submit"], input[type="reset"] {
+    color: $textColor;
+    border-radius: $border;
+    padding: 10px 5px;
     font-size: 20px;
-    color: $coloText;
     cursor: pointer;
 }
 
-input[type="submit"] { cursor: pointer; }
+.Button_list {
+    border: 2px solid $textColor;
+    background-color: $buttonColor;
+    padding: 10px 20px;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.Delete, .Button_cancel {
+    color: $red;
+    border: 2px solid $red;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $red;
+        border: 2px solid transparent;
+        color: $tertiary;
+    }
+}
 
 .Button_trasparent {
     background-color: transparent;
     border: none;
+
+    &:hover {
+        background-color: transparent;
+        border: none;
+    }
 }
 
-.d-none { display: none; }
+.Button_add {
+    border: 2px solid $textColor;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $buttonColor;
+        border: 2px solid $buttonColor;
+    }
+}
 
 // Body
 body {
@@ -99,12 +139,19 @@ body {
         top: 10%;
         right: 50%;
 
-        width: 300px;
+        width: 400px;
         height: auto;
 
         background-color: $secondary;
         border-radius: $border;
         padding: 10px;
+
+        box-shadow: 20px 20px 10px $textColor;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
@@ -124,7 +171,7 @@ footer {
     bottom: 0;
 
     a {
-        color: $coloText;
+        color: $textColor;
         text-decoration: none;
         font-size: 25px;
     }

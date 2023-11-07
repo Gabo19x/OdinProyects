@@ -28,27 +28,58 @@ p {
 input, select, textarea {
   font-size: 18px;
   padding: 5px;
+  margin-bottom: 5px;
   color: #212121;
 }
 
-button {
-  padding: 5px 10px;
+.d-none {
+  display: none;
+}
+
+button, select, input[type=submit], input[type=reset] {
+  color: #212121;
+  border-radius: 10px;
+  padding: 10px 5px;
   font-size: 20px;
-  color: #212121;
   cursor: pointer;
 }
 
-input[type=submit] {
-  cursor: pointer;
+.Button_list {
+  border: 2px solid #212121;
+  background-color: #8BC34A;
+  padding: 10px 20px;
+}
+.Button_list:hover {
+  color: #C8E6C9;
+}
+
+.Delete, .Button_cancel {
+  color: rgb(221, 1, 1);
+  border: 2px solid rgb(221, 1, 1);
+  background-color: transparent;
+}
+.Delete:hover, .Button_cancel:hover {
+  background-color: rgb(221, 1, 1);
+  border: 2px solid transparent;
+  color: #f0f0f0;
 }
 
 .Button_trasparent {
   background-color: transparent;
   border: none;
 }
+.Button_trasparent:hover {
+  background-color: transparent;
+  border: none;
+}
 
-.d-none {
-  display: none;
+.Button_add {
+  border: 2px solid #212121;
+  background-color: transparent;
+}
+.Button_add:hover {
+  background-color: #8BC34A;
+  border: 2px solid #8BC34A;
 }
 
 body {
@@ -90,7 +121,7 @@ body main .Task_list .High {
 body nav {
   display: block;
   justify-self: end;
-  background-color: #FFA000;
+  background-color: #388E3C;
   padding: 20px 5px;
   height: 100%;
 }
@@ -101,15 +132,20 @@ body .Form_create_task {
   position: fixed;
   top: 10%;
   right: 50%;
-  width: 300px;
+  width: 400px;
   height: auto;
-  background-color: #FFECB3;
+  background-color: #C8E6C9;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 20px 20px 10px #212121;
+}
+body .Form_create_task div {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-  background-color: #FFA000;
+  background-color: #388E3C;
   width: 100%;
   height: 5vw;
   padding: 20px;

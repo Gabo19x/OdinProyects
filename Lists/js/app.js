@@ -43,6 +43,10 @@ class List {
         this.taskList = newList;
     }
 
+    DeleteList() {
+        this.taskList = [];
+    }
+
     AddTask(task) {
         this.taskList.push(task);
     }
@@ -169,6 +173,7 @@ buttonAddTask.addEventListener("click", () => {
     */
 formTask.addEventListener("submit", (e) => {
     e.preventDefault();
+    e.stopPropagation();
     let actuallyList = [];
 
     let name = document.getElementById("Form_task--name").value;
@@ -189,7 +194,7 @@ formTask.addEventListener("submit", (e) => {
     let create = true;
     if(actuallyList.length > 0 && exist === true) {
         actuallyList.forEach(obj => {
-            (obj.id == task.id) ? create = false : create = true;
+            (obj.id === task.id) ? create = false : create = true;
         });
     } else {
         create = true;
@@ -198,7 +203,6 @@ formTask.addEventListener("submit", (e) => {
     if(create == true && exist == true) {
         actuallyList.AddTask(task);
         
-
         const clone = tempTask.cloneNode(true);
         
         if(task.opt =="🟢Low") { clone.querySelector("div").classList.add("Low"); }
@@ -217,27 +221,31 @@ formTask.addEventListener("submit", (e) => {
 });
 //#endregion
 
+//#region Varios
 /* ADDEVENT
     Actividad de borrar, o una lista, o una tarea o todas las tareas.
+    Y cerrar el formulario de crear tarea.
  */
 document.addEventListener("click", (e) => {
+    e.stopPropagation();
     
     const dadObj = e.target.parentElement;
 
+    // Borrar una lista
     if(dadObj.classList.contains("List") && e.target.classList.contains("Delete")) {
         
         for (let i = 0; i < allList.length; i++) {
             if(allList[i].id === e.target.dataset.id) {
                 allList.splice(i, 1);
                 dadObj.remove();
-            }
-            
+            }   
         }
-    }else if(dadObj.classList.contains("Task") && e.target.classList.contains("Delete")) {
+    } // Borrar una tarea
+    else if(dadObj.classList.contains("Task") && e.target.classList.contains("Delete")) {
 
         allList.forEach(list => {
-
-            const actuallyList = list.GetList();
+            console.log(list.taskList);
+            const actuallyList = list.taskList;
             for (let i = 0; i < actuallyList.length; i++) {
                 
                 if(actuallyList[i].id === e.target.dataset.id) {
@@ -246,17 +254,23 @@ document.addEventListener("click", (e) => {
                 }
             }
         });
-    }else if(dadObj.classList.contains("Main") && e.target.classList.contains("Delete")) {
+    } // Borrar todas las tareas
+    else if(dadObj.classList.contains("Main") && e.target.classList.contains("Delete")) {
         
         const id = document.getElementById("AddTask").dataset.id;
 
         allList.forEach(list => {
             
             if(list.id === id) {
-                list.SetList([]);
+                console.log(`${list.name} >> ${list.taskList}`);
+                list.taskList = [];
                 taskList.innerHTML = "";
             }
         });
+    } // Cerrar el formulario de creacion
+    else if(e.target.classList.contains("Button_cancel")) {
+        console.log("click en cancelar");
+        formTask.classList.add("d-none");
     }
 });
 
@@ -276,3 +290,20 @@ window_mouseout( document, 'mouseout', event => {
 
     SetLocalStorage(allList);
 } );
+//#endregion
+
+//#region Mostrar datos
+document.addEventListener("DOMContentLoaded", (e) => {
+    if(allList != null) {
+        
+        allList.forEach(list => {
+            const clone = tempList.cloneNode(true);
+            clone.querySelector("button").textContent = list.name;
+            clone.querySelector("button").dataset.id = list.id;
+            clone.querySelector(".Delete").dataset.id = list.id;
+            superList.appendChild(clone);
+        });
+    }
+    
+});
+//#endregion

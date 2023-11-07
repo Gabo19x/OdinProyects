@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My restaurant</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="assets/Food.webp"> <!-- Icon -->
+</head>
+<body>
+    <nav>
+        <h1>Delicious cravings</h1>
+
+        <Form class="Search">
+            <input placeholder="Let's look for food" type="text" required >
+            <input type="submit" value="🔎 Search">
+        </Form>
+
+        <button>Menu</button>
+    </nav>
+
+    <main id="Main">
+        <article class="Food_card Food_card--True">
+            <h2>Arepa</h2>
+            <p>990</p>
+            <h3 class="Food_card_avalible--true">Avalible</h3>
+        </article>
+
+        <article class="Food_card Food_card--False">
+            <h2>Pupusas</h2>
+            <p>99</p>
+            <h3 class="Food_card_avalible--false">Not available</h3>
+        </article>
+
+        <template id="Food_temp">
+            <article class="Food_card">
+                <h2></h2>
+                <p></p>
+                <h3></h3>
+            </article>
+        </template>
+    </main>
+
+    <footer>
+        <a href="https://github.com/Gabo19x">Powered by: GABO19</a>
+    </footer>
+</body>
+<script src="./js/app.js"></script>
+</html>

@@ -1,0 +1,132 @@
+// Variables
+$purple: #512DA8;
+$pink: #E1BEE7;
+$red: rgb(150, 0, 0);
+$green: rgb(7, 109, 7);
+
+$colorTitle: #FFFFFF;
+$colorText: #212121;
+
+// Global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 { color: $colorTitle; font-size: 50px; }
+h2 { color: $colorText; font-size: 30px; }
+h3 { color: $colorText; font-size: 20px; }
+p { color: $colorText; font-size: 18px; }
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: $colorText;
+    color: $colorTitle;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid $colorTitle;
+    }
+}
+
+// Nav
+nav {
+    display: block;
+
+    height: auto;
+    padding: 10px 0 10px 20px;
+
+    background-color: $purple;
+
+    form {
+        margin: 10px 0 20px 0;
+        input {
+            padding: 5px 10px;
+            font-size: 18px;
+            background-color: $pink;
+            color: $colorText;
+            outline: none;
+        }
+
+        input[type="Text"] {
+            border-radius: 10px 0 0 10px;
+        }
+
+        input[type="Submit"] {
+            background-color: $colorText;
+            color: $colorTitle;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+        }
+    }
+}
+
+// Main
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+
+    padding: 20px;
+
+    .Food_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        height: min(300px);
+        width: min(300px);
+
+        .Food_card_avalible--true {
+            background-color: $green;
+            padding: 7px;
+            border-radius: 10px;
+            color: $colorTitle;
+        }
+
+        .Food_card_avalible--false {
+            background-color: $red;
+            padding: 7px;
+            border-radius: 10px;
+            color: $colorTitle;
+        }
+    }
+
+    .Food_card--True {
+        box-shadow: 0 10px $green, 0 -10px $green;
+    }
+
+    .Food_card--False {
+        box-shadow: 0 10px $red, 0 -10px $red;
+    }
+}
+
+// Footer
+footer {
+    background-color: $purple;
+    
+    width: 100%;
+    height: 5vw;
+    padding: 20px;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    position: fixed;
+    bottom: 0;
+
+    a {
+        color: $colorTitle;
+        text-decoration: none;
+        font-size: 25px;
+    }
+}
