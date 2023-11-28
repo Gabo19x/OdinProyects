@@ -67,17 +67,20 @@ nav form input[type=Submit] {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2px;
+  gap: 30px;
   padding: 20px;
+  height: 100rem;
 }
 main .Food_card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(184, 184, 184);
   border-radius: 10px;
-  height: 300px;
+  height: 400px;
   width: 300px;
+  padding: 5px 10px;
 }
 main .Food_card .Food_card_avalible--true {
   background-color: rgb(7, 109, 7);
@@ -90,6 +93,13 @@ main .Food_card .Food_card_avalible--false {
   padding: 7px;
   border-radius: 10px;
   color: #FFFFFF;
+}
+main .Food_card #Food_image {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 main .Food_card--True {
   box-shadow: 0 10px rgb(7, 109, 7), 0 -10px rgb(7, 109, 7);

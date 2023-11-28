@@ -3,6 +3,7 @@ $purple: #512DA8;
 $pink: #E1BEE7;
 $red: rgb(150, 0, 0);
 $green: rgb(7, 109, 7);
+$grey: rgb(184, 184, 184);
 
 $colorTitle: #FFFFFF;
 $colorText: #212121;
@@ -70,20 +71,25 @@ nav {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 30px;
 
     padding: 20px;
+
+    height: min(100rem);
 
     .Food_card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: $grey;
 
         border-radius: 10px;
 
-        height: min(300px);
+        height: min(400px);
         width: min(300px);
+
+        padding: 5px 10px;
 
         .Food_card_avalible--true {
             background-color: $green;
@@ -97,6 +103,14 @@ main {
             padding: 7px;
             border-radius: 10px;
             color: $colorTitle;
+        }
+
+        #Food_image {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 10px;
+            margin: 10px 0;
         }
     }
 
