@@ -5,3 +5,4 @@
 4. Triqui (HTML SCSS JS).
 5. List page (HTML SCSS JS LocalStorage).
 6. Restaurant (HTML SCSS JS API).
+7. Binary tree (JS).
