@@ -6,3 +6,4 @@
 5. List page (HTML SCSS JS LocalStorage).
 6. Restaurant (HTML SCSS JS API).
 7. Binary tree (JS).
+8. Naval battle (HTML SCSS JS).

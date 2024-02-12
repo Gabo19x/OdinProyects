@@ -94,7 +94,7 @@ document.addEventListener("click", (e) => {
 
                 if(book.id == e.target.dataset.id) {
                     const dadElement = e.target.parentElement;
-                    dadElement.classList.toggle("Book--check");
+                    dadElement.classList.toggle("CasillaVacia");
                     book.check = !book.check;
                 }
             });

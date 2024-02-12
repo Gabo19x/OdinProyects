@@ -1,0 +1,23 @@
+.Tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Tablero_casilla {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 5px;
+
+    h1 {
+        color: white;
+    }
+}
+
+.Casilla_barco {
+    background-color: red;
+}
+
+.Casilla_vacia {
+    background-color: blue;
+}
