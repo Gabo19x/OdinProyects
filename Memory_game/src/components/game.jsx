@@ -3,6 +3,10 @@ import useApi from '../hooks/useApi';
 
 import Card from './card';
 
+/* COMPONENTE
+    Guarda y crea los elementos y los organiza aleatoriamente para el juego.
+    @params puntos; funcion set de puntos y de finalizar juego
+*/
 export default function Game({puntos, setPuntos, setFinalizo}) {
 
     const [ban0, setBan0] = useState(false);
@@ -30,6 +34,10 @@ export default function Game({puntos, setPuntos, setFinalizo}) {
     const {data, cargando} = useApi();
     // (cargando) ? console.log("Cargando") : console.log(data);
 
+    /* FUNCION
+        Click para guardar y saber si al objeto ya se le dio click.
+        @params booleano click; y la funcion set
+    */
     function HizoClick(click, SetClick) {
         if(click == false) { SetClick(true); setPuntos(puntos += 1); }
         else if(click == true) { setFinalizo(true); }
@@ -48,11 +56,19 @@ export default function Game({puntos, setPuntos, setFinalizo}) {
         ele9 = <Card key={"999"} imagen={data[9].imagen} funcion={HizoClick} click={ban9} SetClick={setBan9}/>;
     }
     
-
+    /* FUNCION
+        Genera un numero random
+        @params numero maximo
+        @return el numero aleatorio
+    */
     function GetNumero(max) {
         return Math.floor(Math.random() * max);
     } 
 
+    /* FUNCION
+        Con los elementos en una lista, se organizan de manera aleatoria para su uso.
+        @parmas lista de los elementos aleatorios
+     */
     function Generar() {
         let lista = [];
         let elementos = [ele0, ele1, ele2, ele3, ele4, ele5, ele6, ele7, ele8, ele9];

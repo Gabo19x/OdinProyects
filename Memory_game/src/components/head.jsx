@@ -1,6 +1,4 @@
 export default function Head({puntuacion}) {
-   
-    
     return(
         <header>
             <h1>🧠 Welcome to the memory game 🧠</h1>

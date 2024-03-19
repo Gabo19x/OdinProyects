@@ -1,0 +1,195 @@
+// Variables
+$primario: #512DA8;
+$secundario: #e7daff;
+$terciario: #33221c;
+$negro: #212121;
+$blanco: rgba(255, 255, 255, 0.411);
+
+$titulo: 50px;
+$subtitulo: 30px;
+$parrafo: 20px;
+
+$radioBorde: 10px;
+$padding: 20px;
+
+// Globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-color: $secundario;
+}
+
+h1 { font-size: $titulo; }
+h2 { font-size: $subtitulo; }
+p { font-size: $parrafo; }
+
+a {
+    text-decoration: none;
+
+    margin: 0 10px;
+    padding: $padding;
+
+    background-color: $terciario;
+    color: white;
+    border-radius: $radioBorde;
+    border: 2px solid $terciario;
+
+    &:hover {
+        border: 2px solid $secundario;
+    }
+}
+
+button {
+    padding: 10px;
+    font-size: $parrafo;
+    border: 0;
+    cursor: pointer;
+}
+
+// Header
+header {
+    background-color: $primario;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: $padding;
+}
+
+// Nav
+nav {
+    background-color: $primario;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $padding;
+
+    button {
+        margin: 0 10px;
+
+        background-color: $terciario;
+        color: white;
+        border: 2px solid $terciario;
+        border-radius: $radioBorde;
+
+        &:hover {
+            border: 2px solid $secundario;
+        }
+    }
+}
+
+// cuerpo
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $padding;
+
+    padding: $padding;
+    margin: 10px 0 100px 0;
+    
+}
+
+// Cuerpo del carrito de compras
+.Carro {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: $padding;
+
+    .Acomprar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $padding;
+    }
+
+    .Total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: $padding;
+
+        background-color: #522da8bd;
+        padding: $padding;
+        border-radius: $radioBorde;
+        height: 150px;
+
+        color: white;
+        box-shadow: 0 10px 30px black;
+
+        button {
+            margin: 0 10px;
+            width: 80%;
+    
+            background-color: $terciario;
+            color: white;
+            border: 5px solid $terciario;
+            border-radius: $radioBorde;
+    
+            &:hover {
+                border: 5px solid $secundario;
+            }
+        }
+    }
+}
+
+.Objeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: $padding;
+
+    background-color: $blanco;
+    border: 2px solid $negro;
+
+    img {
+        width: 300px;
+        height: 400px;
+
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: $terciario;
+        color: white;
+
+        &:hover {
+            border: 2px solid $secundario;
+        }
+    }
+}
+
+.CompraTerminada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: $padding;
+}
+
+// Footer
+footer {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    background-color: $primario;
+
+    padding: $padding;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+}

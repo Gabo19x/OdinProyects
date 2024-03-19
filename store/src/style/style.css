@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #e7daff;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #33221c;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #33221c;
+}
+a:hover {
+  border: 2px solid #e7daff;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+header {
+  background-color: #512DA8;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+nav {
+  background-color: #512DA8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+nav button {
+  margin: 0 10px;
+  background-color: #33221c;
+  color: white;
+  border: 2px solid #33221c;
+  border-radius: 10px;
+}
+nav button:hover {
+  border: 2px solid #e7daff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px 0 100px 0;
+}
+
+.Carro {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+.Carro .Acomprar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.Carro .Total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(82, 45, 168, 0.7411764706);
+  padding: 20px;
+  border-radius: 10px;
+  height: 150px;
+  color: white;
+  box-shadow: 0 10px 30px black;
+}
+.Carro .Total button {
+  margin: 0 10px;
+  width: 80%;
+  background-color: #33221c;
+  color: white;
+  border: 5px solid #33221c;
+  border-radius: 10px;
+}
+.Carro .Total button:hover {
+  border: 5px solid #e7daff;
+}
+
+.Objeto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.411);
+  border: 2px solid #212121;
+}
+.Objeto img {
+  width: 300px;
+  height: 400px;
+  margin: 10px 0;
+}
+.Objeto button {
+  background-color: #33221c;
+  color: white;
+}
+.Objeto button:hover {
+  border: 2px solid #e7daff;
+}
+
+.CompraTerminada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background-color: #512DA8;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import Head from './components/head';
-import useTextos from './hooks/useText';
 import Game from './components/game';
 import Pierde from './components/perdio';
 import Gano from './components/ganar';
@@ -13,6 +12,9 @@ function App() {
   const [puntos, SetPuntos] = useState(0);
   const [finalizo, SetFinalizo] = useState(false);
   
+  /* FUNCION
+    Segun su puntuacion determina si sigue jugando o si perdio o gano.
+  */
   function Juego() {
     if(finalizo) {
       return(<Pierde/>);
